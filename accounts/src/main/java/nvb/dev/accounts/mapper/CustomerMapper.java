@@ -1,15 +1,17 @@
 package nvb.dev.accounts.mapper;
 
+import nvb.dev.accounts.dto.AccountsDto;
 import nvb.dev.accounts.dto.CustomerDto;
 import nvb.dev.accounts.entity.CustomerEntity;
 
 public class CustomerMapper {
 
-    public static CustomerDto mapToCustomerDto(CustomerEntity customerEntity) {
+    public static CustomerDto mapToCustomerDto(CustomerEntity customerEntity, AccountsDto accountsDto) {
         return new CustomerDto(
                 customerEntity.getName(),
                 customerEntity.getEmail(),
-                customerEntity.getMobileNumber()
+                customerEntity.getMobileNumber(),
+                accountsDto
         );
     }
 
