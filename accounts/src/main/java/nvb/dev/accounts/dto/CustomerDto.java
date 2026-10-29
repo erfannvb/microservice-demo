@@ -1,10 +1,6 @@
 package nvb.dev.accounts.dto;
 
-import lombok.Data;
-
-@Data
-public class CustomerDto {
-    private String name;
-    private String email;
-    private String mobileNumber;
+public record CustomerDto(String name,
+                          String email,
+                          String mobileNumber) {
 }

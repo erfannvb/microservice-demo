@@ -1,16 +1,11 @@
 package nvb.dev.accounts.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.http.HttpStatus;
 
 import java.time.LocalDateTime;
 
-@AllArgsConstructor
-@Data
-public class ErrorResponseDto {
-    private String apiPath;
-    private HttpStatus statusCode;
-    private String errorMessage;
-    private LocalDateTime timestamp;
+public record ErrorResponseDto(String apiPath,
+                               HttpStatus statusCode,
+                               String errorMessage,
+                               LocalDateTime timestamp) {
 }

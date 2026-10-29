@@ -1,10 +1,6 @@
 package nvb.dev.accounts.dto;
 
-import lombok.Data;
-
-@Data
-public class AccountsDto {
-    private Long accountNumber;
-    private String accountType;
-    private String branchAddress;
+public record AccountsDto(Long accountNumber,
+                          String accountType,
+                          String branchAddress) {
 }
